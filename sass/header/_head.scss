@@ -1,0 +1,79 @@
+.header {
+	display: block;
+	float: left;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 160px;
+	background-color: rgba(0, 0, 0, 0.7);
+	
+	line-height: 160px;
+	vertical-align: middle;
+	z-index: 99;
+	&--logo {
+		width: 20%;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+		color: #000;
+		&--img {
+			width: 80%;
+			height: auto;
+			fill: #fff;
+		}
+		img {
+			display: none;
+		}
+	}
+	&--numb {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+		color: #FFF;
+		text-align: right;
+		width: 54%;
+		
+		h4 {
+			font-size: 45px;
+			font-family: $ant;
+			margin: 0;
+		}
+		p {
+			font-size: 18px;
+			margin: 0;			
+		}
+	}
+	&--callbut {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+		width: 25%;
+		position: relative;
+		a {
+			float: right;
+			color: #FFF;
+			position: relative;
+			right: 0;
+			text-align: center;
+			display: block;
+			font-weight: bold;
+			font-size: 18px;
+			text-transform: uppercase;
+			width: 211px;
+			height: 46px;
+			line-height: 46px;
+			border: 2px solid #ef1b20;
+			background-color: rgba(255,255,255,.1);
+			text-decoration: none;
+			@include transition(.4s);
+			outline: none;
+			&:hover {
+				background-color: rgba(255,255,255, 1);
+				color: #ef1b20
+			}
+		}
+	}
+}

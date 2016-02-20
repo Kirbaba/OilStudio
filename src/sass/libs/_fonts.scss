@@ -1,0 +1,45 @@
+$cent: "CenturyGothicRegular";
+$ant: 'antiqua';
+$cav: 'CaviarDreams';
+$cavb: 'CaviarDreams_Bold';
+
+
+@font-face {
+    font-family: "CenturyGothicRegular";
+    src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
+    src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
+    url("../fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+	font-family: 'antiqua';
+	src: url('../fonts/Antiqua/antiqua.eot');
+	src: url('../fonts/Antiqua/antiqua.eot') format('embedded-opentype'),
+		url('../fonts/Antiqua/antiqua.woff2') format('woff2'),
+		url('../fonts/Antiqua/antiqua.woff') format('woff'),
+		url('../fonts/Antiqua/antiqua.ttf') format('truetype'),
+		url('../fonts/Antiqua/antiqua.svg#antiqua') format('svg');
+}
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams.eot');
+    src: url('../fonts/CaviarDreams.eot') format('embedded-opentype'),
+         url('../fonts/CaviarDreams.woff2') format('woff2'),
+         url('../fonts/CaviarDreams.woff') format('woff'),
+         url('../fonts/CaviarDreams.ttf') format('truetype'),
+         url('../fonts/CaviarDreams.svg#CaviarDreams') format('svg');
+}
+
+@font-face {
+    font-family: 'CaviarDreams_Bold';
+    src: url('../fonts/CaviarDreams_Bold.eot');
+    src: url('../fonts/CaviarDreams_Bold.eot') format('embedded-opentype'),
+         url('../fonts/CaviarDreams_Bold.woff2') format('woff2'),
+         url('../fonts/CaviarDreams_Bold.woff') format('woff'),
+         url('../fonts/CaviarDreams_Bold.ttf') format('truetype'),
+         url('../fonts/CaviarDreams_Bold.svg#CaviarDreams_Bold') format('svg');
+}

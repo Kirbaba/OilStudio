@@ -1,0 +1,89 @@
+.header {
+	display: block;
+	float: left;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 135px;
+	background-color: #fff;	
+	line-height: 135px;
+	vertical-align: middle;
+	z-index: 99;
+	h3 {
+		font-size: 55px;
+		font-family: $ant;
+		margin: 0;
+	}
+	small {
+		font-family: $cavb;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+	.logo-red {
+		color: #ED1E24;
+	}
+	&--logo {
+		width: 25%;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+		color: #000;
+		&--img {
+			width: 80%;
+			height: auto;
+			fill: #fff;
+		}
+	}
+	&--numb {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+		color: #FFF;
+		text-align: right;
+		width: 51%;		
+		h4 {
+			font-size: 42px;
+			font-family: $cent;
+			margin: 0;
+			color: #000;	
+			font-weight: bold;
+		}
+		p {
+			font-size: 18px;
+			margin: 0;			
+		}
+	}
+	&--callbut {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+		width: 23%;
+		position: relative;
+		a {
+			float: right;
+			color: #000;
+			position: relative;
+			right: 0;
+			text-align: center;
+			display: block;
+			font-weight: bold;
+			font-size: 17px;
+			text-transform: uppercase;
+			width: 211px;
+			height: 46px;
+			line-height: 46px;
+			text-decoration: none;
+			@include transition(.4s);
+			outline: none;
+			border: 3px solid #ef1b20;
+			background-color: rgba(237,30,36,.1);
+			&:hover {
+				background-color: rgba(255,255,255, 1);
+				color: #ef1b20
+			}
+		}
+	}
+}

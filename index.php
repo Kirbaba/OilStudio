@@ -20,7 +20,8 @@
 		<div class="contain">
 			<div class="header--logo">
 				<h3><span class="logo-red">Oil</span>Studio</h3>	
-				<small>100% натуральные масла премиум-класс<br />с доставкой по всей России</small>			
+				<small>100% натуральные масла премиум-класс<br />с доставкой по всей России</small>		
+				<img src="<?php bloginfo('template_directory'); ?>/img/logo-1.png" alt="" class="header--logo--img" />
 			</div>
 			<div class="header--numb">
 				<h4><?php echo get_theme_mod('phone_textbox'); ?></h4>
@@ -314,7 +315,7 @@
 						масло, первый холодный отжим.
 						Производитель Филиппины<br />
 						200 гр</h4>
-						<a href="" class="boxes__item--desc--but">Заказать</a>
+						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
 					</div>
 					<!-- close .oils__item--title -->
 					<!-- open .oils__item--desc -->
@@ -357,7 +358,7 @@
 						масло Arganature, первый холодный отжим.
 						Производитель Филиппины<br />
 						100 мл</h4>
-						<a href="" class="boxes__item--desc--but">Заказать</a>
+						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
 					</div>
 					<!-- close .oils__item--title -->
 					<!-- open .oils__item--desc -->
@@ -405,7 +406,7 @@
 						ручной отжим. 
 						Производитель Буркина-Фасо<br />
 						200 мл</h4>
-						<a href="" class="boxes__item--desc--but">Заказать</a>
+						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
 					</div>
 					<!-- close .oils__item--title -->
 					<!-- open .oils__item--desc -->
@@ -454,7 +455,7 @@
 						органических какао бобов. 
 						Производитель Колумбия<br />
 						200 мл</h4>
-						<a href="" class="boxes__item--desc--but">Заказать</a>
+						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
 					</div>
 					<!-- close .oils__item--title -->
 					<!-- open .oils__item--desc -->

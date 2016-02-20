@@ -12,8 +12,8 @@
 		height: auto;
 		margin-left: 10px;		
 	}
-	.boxes__item--desc ul {
-		min-height: 210px;
+	.boxes__item--desc {
+		min-height: 550px;
 	}
 	.boxes__item--desc h4 {
 		min-height: 85px;
@@ -23,7 +23,8 @@
 		left: 0;
 	}
 	.infographics__item-2 {
-		right: 45px;
+		right: 0;
+		top: 30px;
 	}
 	.infographics__item-3 {
 		left: 0;
@@ -32,26 +33,25 @@
 		right: 0;
 	}
 	.infographics .arrow-left-top {
-		left: -86px;
-    	width: 75px;
+		
 	}
 	.infographics .arrow-right-top {
-		width: 206px;
-		height: 128px;
-		right: -60px;
-		top: 60px;
+		width: 106px;
+	    height: 62px;
+	    right: 35px;
+	    top: 65px;
 	}
 	.infographics .arrow-right-bot {
-		width: 105px;
-		height: 183px;
-		bottom: -176px;
-		right: 165px;
+		width: 125px;
+	    height: 97px;
+	    bottom: -20px;
+	    right: 52px;
 	}
 	.infographics .arrow-left-bot {
 		width: 165px;
 		height: 107px;
-		bottom: -182px;
-		left: -90px;
+		bottom: -46px;
+		left: -56px;
 	}
 	.want h4 {
 		display: block;
@@ -75,6 +75,28 @@
     .title__form--head:before {
     	content: none;
     }
+    .header--logo {
+    	width: 25%;
+    }
+    .header--numb {
+    	width: 50%;
+    	-webkit-box-sizing: border-box;
+    	   -moz-box-sizing: border-box;
+    	        box-sizing: border-box;
+    	padding-right: 15px;
+    }
+    .oils__item--img--price {
+    	z-index: 0;
+    	top: 0;
+    }
+    .header {
+    	h3, small {
+    		display: none;
+    	}
+    }
+    .title__form {
+    	z-index: 9;
+    }
 }
 
 @media only screen and (max-width: 770px) {
@@ -85,8 +107,8 @@
 		text-align: center;
 	}
 	.boxes__item {
-		width: 90%;
-	    margin: 10px auto 10px;
+		width: 80%;
+	    margin: 25px auto;
 	    float: none;
 	
 	}
@@ -162,9 +184,15 @@
 	.infographics__box {
 		height: auto;
 	}
-	
+	.header--logo {
+	    width: 20%;
+	    img {
+	    	width: 100%;
+	    }
+	}
 	.header--numb {
 		width: 45%;
+		padding: 0;
 		h4 {
 			font-size: 34px;
 		}
@@ -174,6 +202,22 @@
 	}
 	.header--callbut {
 		width: 33%;
+	}
+	.title h2 {
+		font-size: 36px;
+	}
+	.infographics__item-1 img, .infographics__item-2 img, .infographics__item-3 img, .infographics__item-4 img, .infographics__item-center img {
+		width: 75%;
+	}
+	.boxes__item--desc {
+		min-height: auto;
+	}
+
+	.oils__item--img, .oils__item--title, .oils__item--desc {
+		width: 100%;
+	}
+	.boxes__item--price {
+		position: relative;
 	}
 }
 
@@ -212,7 +256,10 @@
 	.modal.in .modal-dialog { 
 		width: 300px!important;
 	}
-
+	
+	.header {
+		padding-top: 15px;
+	}
 	.header--logo {
     	width: 45%; 
     }
@@ -252,6 +299,9 @@
     .modal-open .modal {
     	max-width: 100%!important;
     }
+    .boxes__item {
+	    width: 95%;
+	}
 }
 
 @media (min-width: 768px) {

@@ -20,14 +20,22 @@
 		<div class="contain">
 			<div class="header--logo">
 				<h3><span class="logo-red">Oil</span>Studio</h3>	
-				<small>100% натуральные масла премиум-класс<br />с доставкой по всей России</small>		
+				<small>100% натуральные масла премиум-класса<br />с доставкой по всей России</small>		
 				<img src="<?php bloginfo('template_directory'); ?>/img/logo-1.png" alt="" class="header--logo--img" />
 			</div>
 			<div class="header--numb">
 				<h4><?php echo get_theme_mod('phone_textbox'); ?></h4>
+				<!-- open .header--numb--soc -->
+				<div class="header--numb--soc">
+					<a href="http://vk.com/oilbox_russia"><i class="fa fa-vk"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+				<!-- close .header--numb--soc -->
+				
 			</div>
 			<div class="header--callbut">
 				<a href="#" data-toggle="modal" data-target="#order_call">заказать звонок</a>
+				
 			</div>
 		</div>		
 	</header>
@@ -244,7 +252,7 @@
 
 					<!-- open .boxes__item--price -->
 					<div class="boxes__item--price">
-						<h4>цена <span>2990</span>руб</h4>
+						<h4>цена <span>1990</span>руб</h4>
 						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
 					</div>
 					<!-- close .boxes__item--price -->
@@ -405,7 +413,7 @@
 						<h4>100% натуральное органическое масло ШИ, 
 						ручной отжим. 
 						Производитель Буркина-Фасо<br />
-						200 мл</h4>
+						200 гр</h4>
 						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
 					</div>
 					<!-- close .oils__item--title -->
@@ -454,7 +462,7 @@
 						<h4>100% какао масло холодного отжима из 
 						органических какао бобов. 
 						Производитель Колумбия<br />
-						200 мл</h4>
+						200 гр</h4>
 						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
 					</div>
 					<!-- close .oils__item--title -->
@@ -611,7 +619,9 @@ p.s. подарки подружкам на праздник
 			<input type="phone" class="want--input" name="want-feedback-phone" placeholder="Телефон">
 			<input type="submit" class="want--sub" value="Заказать">
 			<div class="want--description">
-				<p>Оставьте заявку прямо сейчас и получите приятный сюрприз от команды "OilStudio" в подарок!</p>
+				<p>Оставьте заявку прямо сейчас 
+					и получите приятный сюрприз от 
+					команды "OilStudio" в подарок!</p>
 			</div>
 		</div>
 	</section>
@@ -625,9 +635,9 @@ p.s. подарки подружкам на праздник
 				<div class="modal-body">
 					
 						<div class="title__form--head">
-							<p>Оставьте заявку прямо сейчас 
-							и получите озонированное 
-							масло в подарок!</p>
+							<p>Оставьте заявку прямо сейчас <br />
+					и получите приятный сюрприз от <br />
+					команды "OilStudio" в подарок!</p>
 						</div>
 						<input type="text" class="title__form--input" name="header-feedback-name" placeholder="Имя">
 						<input type="email" class="title__form--input" name="header-feedback-mail"placeholder="E-mail">
@@ -646,7 +656,10 @@ p.s. подарки подружкам на праздник
 				<div class="modal-body">
 
 					<div class="title__form--head">
-						<p>Ваша заявка принята. Спасибо зазаказ!</p>
+						<p>Спасибо! <br />
+						Ваша заявка принята! <br />
+						Скоро с вами свяжется наш менеджер 
+						для уточнения заказа.</p>
 					</div>
 					<input type="button" class="title__form--sub" value="Закрыть" data-dismiss="modal">
 				</div>

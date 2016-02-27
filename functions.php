@@ -68,7 +68,7 @@ if ( function_exists( 'add_theme_support' ) )
     add_theme_support( 'post-thumbnails' );
 
 /*===================THEME SETTINGS============================*/
-
+/* */
 add_action('customize_register', function($customizer){
     /*Меню настройки контактов*/
     $customizer->add_section(
@@ -116,6 +116,41 @@ add_action('customize_register', function($customizer){
             'type' => 'text',
         )
     );
+
+    /*Меню настройки соц-сетей*/
+    $customizer->add_section(
+        'social_section',
+        array(
+            'title' => 'Настройки соц. сетей',
+            'description' => 'Социальные сети',
+            'priority' => 35,
+        )
+    );
+    $customizer->add_setting(
+        'vk_textbox',
+        array('default' => 'http://vk.com/oilbox_russia')
+    );
+    $customizer->add_setting(
+        'inst_textbox',
+        array('default' => 'http://instagram.com')
+    );
+
+    $customizer->add_control(
+        'vk_textbox',
+        array(
+            'label' => 'Вконтакте',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'inst_textbox',
+        array(
+            'label' => 'Instagram',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
 });
 
 /*=================END THEME SETTINGS==========================*/
@@ -126,11 +161,183 @@ add_action('wp_ajax_send_feedback', 'sendFeedback');
 add_action('wp_ajax_nopriv_send_feedback', 'sendFeedback');
 
 function sendFeedback(){
+    $admin_mail = get_option('admin_email');
+
     $name = $_POST['name'];
     $mail = $_POST['mail'];
     $phone = $_POST['phone'];
 
-    mail(get_theme_mod('mail_textbox'), "Письмо с вашего сайта", "С вашего сайта запросили обратную связь:<br> Имя: $name<br> Телефон: $phone<br> Email: $mail", "Content-type: text/html; charset=UTF-8\r\n");
+
+
+
+    if($_POST['option']){
+        $str = "С вашего сайта сделали заказ:";
+        $str .= "</br> Товар: ".$_POST['option'];
+        $str .= "<br> Имя: $name<br> Телефон: $phone<br> Email: $mail";
+    }else{
+        $str = "С вашего сайта запросили обратную связь:";
+        $str .= "<br> Имя: $name<br> Телефон: $phone<br> Email: $mail";
+    }
+
+    mail($admin_mail, "Письмо с сайта oilbox24.ru",$str , "Content-type: text/html; charset=UTF-8\r\n");
 }
 
 /*======================END FEEDBACK===========================*/
+
+/*----------------------------------------------— REVIEWS —---------------------------------------------------------*/
+
+add_action('init', 'myCustomInitReviews');
+
+function myCustomInitReviews()
+{
+    $labels = array(
+        'name' => 'Отзывы', // Основное название типа записи
+        'singular_name' => 'Отзывы', // отдельное название записи типа Book
+        'add_new' => 'Добавить отзыв',
+        'add_new_item' => 'Добавить новый отзыв',
+        'edit_item' => 'Редактировать отзыв',
+        'new_item' => 'Новый отзыв',
+        'view_item' => 'Посмотреть отзыв',
+        'search_items' => 'Найти отзыв',
+        'not_found' => 'Отзывов не найдено',
+        'not_found_in_trash' => 'В корзине отзывов не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Отзывы'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor','thumbnail')
+    );
+    register_post_type('reviews', $args);
+}
+
+function reviewShortcode()
+{
+    $args = array(
+        'post_type' => 'reviews',
+        'post_status' => 'publish',
+        'posts_per_page' => -1);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/reviews.php', ['my_query' => $my_query]);
+}
+
+add_shortcode('reviews', 'reviewShortcode');
+
+/*---------------------------------------------— END REVIEWS —------------------------------------------------------*/
+
+/*---------------------------------------------— PRODUCTION —------------------------------------------------------*/
+
+add_action('save_post', 'myExtraFieldsUpdate', 10, 1);
+
+/* Сохраняем данные, при сохранении поста */
+function myExtraFieldsUpdate($post_id)
+{
+    if (!isset($_POST['extra'])) return false;
+    foreach ($_POST['extra'] as $key => $value) {
+        if (empty($value)) {
+            delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+            continue;
+        }
+
+        update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+    }
+    return $post_id;
+}
+
+add_action('init', 'myCustomInitProducts');
+
+function myCustomInitProducts()
+{
+    $labels = array(
+        'name' => 'Товары', // Основное название типа записи
+        'singular_name' => 'Товары', // отдельное название записи типа Book
+        'add_new' => 'Добавить товар',
+        'add_new_item' => 'Добавить новый товар',
+        'edit_item' => 'Редактировать товар',
+        'new_item' => 'Новый товар',
+        'view_item' => 'Посмотреть товар',
+        'search_items' => 'Найти товар',
+        'not_found' => 'Товаров не найдено',
+        'not_found_in_trash' => 'В корзине товаров не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Товары'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor','thumbnail')
+    );
+    register_post_type('product', $args);
+}
+
+function productsShortcode()
+{
+
+    $args = array(
+        'post_type' => 'product',
+        'post_status' => 'publish',
+        'posts_per_page' => -1);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/products.php', ['my_query' => $my_query]);
+}
+
+add_shortcode('products', 'productsShortcode');
+
+function extraFieldsProductsSubtitle($post)
+{
+    ?>
+    <p>
+        <span>Подзаголовок: </span>
+        <input type="text" name='extra[subtitle]' value="<?php echo get_post_meta($post->ID, "subtitle", 1); ?>">
+    </p>
+    <?php
+}
+
+function extraFieldsProductsPrice($post)
+{
+    ?>
+    <p>
+        <span>Цена: </span>
+        <input type="text" name='extra[price]' value="<?php echo get_post_meta($post->ID, "price", 1); ?>">
+    </p>
+    <?php
+}
+
+function myExtraFieldsProducts()
+{
+    add_meta_box('extra_subtitle', 'Подзаголовок', 'extraFieldsProductsSubtitle', 'product', 'normal', 'high');
+    add_meta_box('extra_price', 'Цена', 'extraFieldsProductsPrice', 'product', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'myExtraFieldsProducts', 1);
+
+/*---------------------------------------------— END PRODUCTION —------------------------------------------------------*/

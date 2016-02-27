@@ -72,8 +72,9 @@ $(function(){
 
 $(function(){
     $(document).on('click','.send_feedback_modal', function(){
+
         var block = $(this).parent();
-        //alert("WOW");
+        alert("WOW2");
         var name = block.children('input[name="header-feedback-name"]').val();
         var mail = block.children('input[name="header-feedback-mail"]').val();
         var phone = block.children('input[name="header-feedback-phone"]').val();

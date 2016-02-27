@@ -27,8 +27,8 @@
 				<h4><?php echo get_theme_mod('phone_textbox'); ?></h4>
 				<!-- open .header--numb--soc -->
 				<div class="header--numb--soc">
-					<a href="http://vk.com/oilbox_russia"><i class="fa fa-vk"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="<?php echo get_theme_mod('vk_textbox'); ?>"><i class="fa fa-vk"></i></a>
+					<a href="<?php echo get_theme_mod('inst_textbox'); ?>"><i class="fa fa-instagram"></i></a>
 				</div>
 				<!-- close .header--numb--soc -->
 				
@@ -52,7 +52,7 @@
 				</div>
 				<input type="text" class="title__form--input" name="header-feedback-name" placeholder="Имя">
 				<input type="email" class="title__form--input" name="header-feedback-mail"placeholder="E-mail">
-				<input type="phone" class="title__form--input" name="header-feedback-phone" placeholder="Телефон">
+				<input type="text" class="title__form--input" name="header-feedback-phone" placeholder="Телефон">
 				<!-- open .title__form--lock -->
 				<div class="title__form--lock">
 					<img src="<?php bloginfo('template_directory'); ?>/img/closed-lock.png" alt="" />
@@ -134,10 +134,9 @@
 					<!-- open .boxes__item--price -->
 						<div class="boxes__item--price">
 							<h4>цена <span>990</span>руб</h4>
-						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
+						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call" data-option="Мини-бокс">Заказать</a>
 						</div>
-						<!-- close .boxes__item--price -->	
-						
+						<!-- close .boxes__item--price -->
 				</div>
 				<!-- <div class="boxes__item--desc--more">
 					<a href="#" data-toggle="modal" data-target="#modal--black">Подробнее</a>
@@ -194,7 +193,7 @@
 						<!-- open .boxes__item--price -->
 						<div class="boxes__item--price">
 							<h4>цена <span>1490</span>руб</h4>
-							<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
+							<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call" data-option="Стандарт-бокс">Заказать</a>
 						</div>
 						<!-- close .boxes__item--price -->
 						
@@ -253,7 +252,7 @@
 					<!-- open .boxes__item--price -->
 					<div class="boxes__item--price">
 						<h4>цена <span>1990</span>руб</h4>
-						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
+						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call" data-option="Мега-бокс">Заказать</a>
 					</div>
 					<!-- close .boxes__item--price -->
 						
@@ -306,187 +305,7 @@
 		<div class="contain">
 			<!-- open .oils__box -->
 			<div class="oils__box">
-				<!-- open .oils__item -->
-				<div class="oils__item">
-					<!-- open .oils__item--img -->
-					<div class="oils__item--img">
-						<!-- open .oils__item--img--price -->
-						<div class="oils__item--img--price">1290р</div>
-						<img src="<?php bloginfo('template_directory'); ?>/img/1(2).png" alt="" />
-						<!-- close .oils__item--img--price -->
-					</div>
-					<!-- close .oils__item--img -->
-					<!-- open .oils__item--title -->
-					<div class="oils__item--title">
-						<h3>Кокосовое масло премиум-класса (PREMIUM COCONUT OIL)</h3>
-						<h4>100% натуральное органическое кокосовое 
-						масло, первый холодный отжим.
-						Производитель Филиппины<br />
-						200 гр</h4>
-						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
-					</div>
-					<!-- close .oils__item--title -->
-					<!-- open .oils__item--desc -->
-					<div class="oils__item--desc">
-							<p><b>Кокосовое масло с прекрасным ароматом можно использовать 
-							для ухода за лицом и волосами: </b></p>
-							<p>- оно обеспечивает увлажнение и питание кожи всего тела; </p>
-							<p>- идеально подходит для массажа; </p>
-							<p>- устраняет растяжки во время беременности, защищает 
-  							кожу от UF; </p>
-							<p>- увлажняет кожу после загара; </p>
-							<p>- препятствует возникновению морщин; </p>
-							<p>- эффективно при сухости и шелушении кожи, трещинах, ожогах; </p>
-							<p>- смягчает и увлажняет волосы; </p>
-							<p>- устраняет ломкость и сухость волос; </p>
-							<p>- придает волосам блеск и упругость; </p>
-							<p>- защищает волосы от вредного воздействия окружающей среды.</p>
-						
-					</div>
-					<!-- close .oils__item--desc -->
-				</div>
-				<!-- close .oils__item -->
-
-				<!-- open .oils__item -->
-				<div class="oils__item">
-					<!-- open .oils__item--img -->
-					<div class="oils__item--img">
-						<!-- open .oils__item--img--price -->
-						<div class="oils__item--img--price">1790р</div>
-						<img src="<?php bloginfo('template_directory'); ?>/img/1(3).png" alt="" />
-						<!-- close .oils__item--img--price -->
-					</div>
-					<!-- close .oils__item--img -->
-					<!-- open .oils__item--title -->
-					<div class="oils__item--title">
-						<h3>Аргановое масло премиум-класса
-						(ARGAN GOLD OIL OF MOROCCO)
-						</h3>
-						<h4>100% натуральное органическое аргановое 
-						масло Arganature, первый холодный отжим.
-						Производитель Филиппины<br />
-						100 мл</h4>
-						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
-					</div>
-					<!-- close .oils__item--title -->
-					<!-- open .oils__item--desc -->
-					<div class="oils__item--desc">
-						<p><b>Масло Арганы идеально подходит для разных типов кожи: сухой, 
-						поврежденной, чувствительной, а также для всех типов волос:</b></p>
-						<p>- смягчает, питает, освежает и увлажняет кожу, предохраняя ее от 
-						  высыхания и шелушения; </p>
-						<p>- восстанавливает липидный баланс кожи, усиливает барьерные
-						  функции кожи;  </p>
-						<p>- повышает упругость и эластичность кожи, выравнивает ее рельеф, 
-						   способствует разглаживанию мелких морщин; </p>
-						<p>- ускоряет процесс естественной регенерации кожи, активизирует 
-						   процессы эпителизации и грануляции поврежденной кожи; </p>
-						<p>- успокаивает кожу, защищает ее от раздражения и воспаления; </p>
-						<p>- защищает кожу от воздействия солнечного ультрафиолета, 
-						   препятствует преждевременному старению кожи и раннему 
-						   появлению возрастных морщин и пигментных пятен; </p>
-						<p>- стимулирует рост волос; </p>
-						<p>- борется с выпадением волос (укрепляет волосяные луковицы); </p>
-						<p>- возвращает красоту и здоровье волос.</p>
-						
-					</div>
-					<!-- close .oils__item--desc -->
-				</div>
-				<!-- close .oils__item -->
-
-				<!-- open .oils__item -->
-				<div class="oils__item">
-					<!-- open .oils__item--img -->
-					<div class="oils__item--img">
-						<!-- open .oils__item--img--price -->
-						<div class="oils__item--img--price">990р</div>
-						<img src="<?php bloginfo('template_directory'); ?>/img/3(2).png" alt="" />
-						<!-- close .oils__item--img--price -->
-					</div>
-					<!-- close .oils__item--img -->
-					<!-- open .oils__item--title -->
-					<div class="oils__item--title">
-						<h3>Масло ШИ премиум-класса
-						(SHEA GOLD)
-
-						</h3>
-						<h4>100% натуральное органическое масло ШИ, 
-						ручной отжим. 
-						Производитель Буркина-Фасо<br />
-						200 гр</h4>
-						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
-					</div>
-					<!-- close .oils__item--title -->
-					<!-- open .oils__item--desc -->
-					<div class="oils__item--desc">
-						<p><b>Масло Ши - самое питательное масло, идеально подходит как 
-						для кожи, так и для волос:</b></p>
-						<p>- способствует заживлению и восстановлению кожи; <p>
-						<p>- оказывает глубокое питательное действие; <p>
-						<p>- устраняет сухость и шелушения кожи лица; <p>
-						<p>- смягчает загрубевшую кожу рук, залечивает трещины на губах, 
-						  пятках; <p>
-						<p>- увлажняет и омолаживает увядающую и сухую кожу; <p>
-						<p>- успокаивает чувствительную кожу после укусов насекомых, 
-						  раздражения, или после бритья; <p>
-						<p>- демонстрирует выраженный антисептический и противо-
-						  воспалительный эффект; <p>
-						<p>- активизирует клеточное дыхание; <p>
-						<p>- лечит дерматиты кожи; <p>
-						<p>- восстанавливает и поддерживает водно-липидный баланс 
-						  волоса после окрашивания, завивки; <p>
-						<p>- оберегает волосы от воздействия фена, утюжка, плойки; <p>
-						<p>- дарит волосам шелковистую мягкость; <p>
-						<p>- "лечит" секущиеся кончики; <p>
-						<p>- укрепляет волос, делает его эластичней.<p>					
-						
-					</div>
-					<!-- close .oils__item--desc -->
-				</div>
-				<!-- close .oils__item -->
-
-				<!-- open .oils__item -->
-				<div class="oils__item">
-					<!-- open .oils__item--img -->
-					<div class="oils__item--img">
-						<!-- open .oils__item--img--price -->
-						<div class="oils__item--img--price">1190р</div>
-						<img src="<?php bloginfo('template_directory'); ?>/img/2(2).png" alt="" />
-						<!-- close .oils__item--img--price -->
-					</div>
-					<!-- close .oils__item--img -->
-					<!-- open .oils__item--title -->
-					<div class="oils__item--title">
-						<h3>Масло Какао Премиум-класса
-							(ORGNAIC CACAO PREMIUM)</h3>
-						<h4>100% какао масло холодного отжима из 
-						органических какао бобов. 
-						Производитель Колумбия<br />
-						200 гр</h4>
-						<a href="#" class="boxes__item--desc--but" data-toggle="modal" data-target="#order_call">Заказать</a>
-					</div>
-					<!-- close .oils__item--title -->
-					<!-- open .oils__item--desc -->
-					<div class="oils__item--desc">
-						<p><b>Масло какао содержит в себе огромное количество полезных 
-						жирных кислот, витаминов, минералов и благодаря такому 
-						богатому составу оказывает на кожу следующие действия:</b></p>
-						<p>- способствует исчезновению косметических дефектов (морщинки, 
-						  гусиные лапки, последствия угревой сыпи, фурункулеза, 
-						  небольших шрамов); <p>
-						<p>- предотвращает появление морщинок;<p>
-						<p>- увлажняет и питает кожу; <p>
-						<p>- рекомендуется использовать во время и после беременности для 
-						  предотвращения растяжек; <p>
-						<p>- имеет заживляющее и тонизирующее действие; <p>
-						<p>- предохраняет кожу от обветривания и обморожения; <p>
-						<p>- подтягивает кожу и придает ей упругость;<p>
-						<p>- замедляет процесс старения кожи.<p>									
-						
-					</div>
-					<!-- close .oils__item--desc -->
-				</div>
-				<!-- close .oils__item -->
+				<?php echo do_shortcode('[products]'); ?>
 			</div>
 			<!-- close .oils__box -->
 		</div>
@@ -499,113 +318,7 @@
 		<h1 class="block_title black">Insta-отзывы наших клиентов</h1>
 		<div class="contain">
 			<div class="reviews__box">
-				<div class="reviews__item">
-					<div class="reviews__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/1.png" alt="">
-					</div>
-					<h2>@tatyanarepina </h2>
-					<p>Это просто волшебный аромат масел, 
-а кокосовое прям так и хочется 
-попробовать, а в действии они просто 
-великолепны!!! @oilbox_russia рада, 
-что вас нашла!!!
-
-					</p>
-				</div>
-				<div class="reviews__item">
-					<div class="reviews__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/6.png" alt="">
-					</div>
-					<h2>@viktoriya_suvorova </h2>
-					<p>Видимо в этом году я была хорошей 
-девочкой, мой Дедушка Мороз уже 
-начал приносить подарки!))) Спасибо 
-большое @oilbox_russia за великолепный 
-бокс с натуральными маслами для 
-ухода, запах просто шикарный, а 
-эффект превзошел все ожидания! 
-Теперь я ваша на веки) 
-</p>
-				</div>
-				<div class="reviews__item">
-					<div class="reviews__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/3.png" alt="">
-					</div>
-					<h2>@mari.chistova </h2>
-					<p>
-						Цветы и наборы от @oilbox_russia с 
-самыми вкусными, ароматными, 
-полезными и самыми натуральными 
-маслами - чудесные подарки и залог 
-хорошего настроения!;)) Кокосовое и 
-какао - фавориты сладкоежек, аргановое 
-масло станет самым любимым у тех, 
-кто для любит ухаживать за своими 
-волосами, а масло Ши незаменимо для 
-самых нежных девушек, заботящихся о 
-том, чтобы кожа была безупречной.;)    
-
-					</p>
-				</div>
-				<div class="reviews__item">
-					<div class="reviews__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/5.png" alt="">
-					</div>
-					<h2>@sweetsweet_dream</h2>
-					<p>Спасибо большое! Получила свой заказ. 
-Масло просто супер-здоровское, такой 
-аромат, что хочется его прямо-таки 
-съесть ложками))) Я обожаю кокос, 
-давно искала такое масло, оно стоит 
-того, чтобы его купить. Кто еще не купил,
- советую, не пожалеете!!! Кожа после 
-какао и Ши просто волшебная! А 
-аргановое-идеальное масло для волос..
-Шелковистые, мега-мягкие, блестящие! 
-И самое главное, после арганы волосы 
-быстро растут и останавливается 
-выпадение..Буду косы отращивать!)))</p>
-				</div>
-				<div class="reviews__item">
-					<div class="reviews__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/2.png" alt="">
-					</div>
-					<h2>@dashabazanova</h2>
-					<p>Хочу сказать большое спасибо за 
-возможность приобретать масла очень 
-высокого качества. Особенно кокосовое 
-с Филиппин!!!)) Филиппинское кокосовое 
-от @oilbox_russia лучшее, что я пробовала 
-и не сравнится ни с одним другим..
-Безумно приятный, нежный и вкусный 
-запах) Потрясающая структура, а самое 
-главное кожа и волосы ликуют от восторга 
-в период холодов и пересушке от 
-центрального отопления) по рекомендации 
-подруги сделала обёртывание для ступней - 
-ножки стали как у младенца))) в общем,
-советую и рекомендую попробовать)))    
-</p>
-				</div>
-				<div class="reviews__item">
-					<div class="reviews__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/4.jpg" alt="">
-					</div>
-					<h2>@gurina_na </h2>
-					<p>oilbox_russia , спасибо! В очередной раз 
-порадовали! Масла превосходные, 
-приятная текстура, восхитительные 
-ароматы.. Словами не описать, какие 
-эмоции у меня вызывают ароматы этих 
-масел! Я давняя поклонница натуральных 
-масел..И как пользователь " со стажем", 
-скажу, что самые качественные и самые
-лучшие у @oilbox_russia )) натуральной 
-арганы, например, и такого потрясающего 
-косового Вы точно нигде не найдете!
-p.s. подарки подружкам на праздник 
-готовы..)))) все от @oilbox_ russia")  </p>
-				</div>
+				<?php echo do_shortcode('[reviews]'); ?>
 			</div>
 		</div>
 	</section>
@@ -641,7 +354,8 @@ p.s. подарки подружкам на праздник
 						</div>
 						<input type="text" class="title__form--input" name="header-feedback-name" placeholder="Имя">
 						<input type="email" class="title__form--input" name="header-feedback-mail"placeholder="E-mail">
-						<input type="phone" class="title__form--input" name="header-feedback-phone" placeholder="Телефон">
+						<input type="text" class="title__form--input" name="header-feedback-phone" placeholder="Телефон">
+						<input type="hidden" class="title__form--input" name="header-feedback-option">
 						<input type="submit" class="title__form--sub send_feedback_modal" value="Заказать">
 					</div>	
 							
@@ -667,6 +381,7 @@ p.s. подарки подружкам на праздник
 			</div>
 		</div>
 	</div>
+
 
 	<script type="text/javascript">
 		addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};

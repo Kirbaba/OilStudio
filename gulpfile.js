@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+//var uglify = require('gulp-uglify');
 
 gulp.task('minify-css', function() {
   return gulp.src('css/style.css')
